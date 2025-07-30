@@ -1,0 +1,298 @@
+# These are non-BIDS fields that can be added by CuBIDS
+derived_params:
+  anat:
+    Dim1Size:
+      precision: 3
+      suggest_variant_rename: no
+    Dim2Size:
+      precision: 3
+      suggest_variant_rename: no
+    Dim3Size:
+      precision: 3
+      suggest_variant_rename: no
+    NSliceTimes:
+      suggest_variant_rename: no
+    NumVolumes:
+      suggest_variant_rename: no
+    VoxelSizeDim1:
+      display_mode: float
+      suggest_variant_rename: no
+    VoxelSizeDim2:
+      display_mode: float
+      suggest_variant_rename: no
+    VoxelSizeDim3:
+      display_mode: float
+      suggest_variant_rename: no
+    AcquisitionMatrixPE:
+      display_mode: float
+      suggest_variant_rename: no
+    ReconMatrixPE:
+      display_mode: float
+      suggest_variant_rename: no
+    PercentSampling:
+      suggest_variant_rename: yes
+    PixelBandwidth:
+      suggest_variant_rename: yes
+    PhaseEncodingSteps:
+      suggest_variant_rename: no
+    SpacingBetweenSlices:
+      suggest_variant_rename: no
+  dwi:
+    Dim1Size:
+      suggest_variant_rename: yes
+    Dim2Size:
+      suggest_variant_rename: yes
+    Dim3Size:
+      suggest_variant_rename: yes
+    NSliceTimes:
+      suggest_variant_rename: yes
+    NumVolumes:
+      suggest_variant_rename: yes
+    Obliquity:
+      suggest_variant_rename: yes
+    VoxelSizeDim1:
+      tolerance: 0.001
+      precision: 3
+      suggest_variant_rename: yes
+    VoxelSizeDim2:
+      tolerance: 0.001
+      precision: 3
+      suggest_variant_rename: yes
+    VoxelSizeDim3:
+      tolerance: 0.001
+      precision: 3
+      suggest_variant_rename: yes
+  fmap:
+    Dim1Size:
+      suggest_variant_rename: yes
+    Dim2Size:
+      suggest_variant_rename: yes
+    Dim3Size:
+      suggest_variant_rename: yes
+    NSliceTimes:
+      suggest_variant_rename: yes
+    NumVolumes:
+      suggest_variant_rename: yes
+    Obliquity:
+      suggest_variant_rename: yes
+    VoxelSizeDim1:
+      tolerance: 0.001
+      suggest_variant_rename: yes
+    VoxelSizeDim2:
+      tolerance: 0.001
+      precision: 3
+      suggest_variant_rename: yes
+    VoxelSizeDim3:
+      tolerance: 0.001
+      precision: 3
+      suggest_variant_rename: yes
+  func:
+    Dim1Size:
+      suggest_variant_rename: yes
+    Dim2Size:
+      suggest_variant_rename: yes
+    Dim3Size:
+      suggest_variant_rename: yes
+    NSliceTimes:
+      suggest_variant_rename: yes
+    NumVolumes:
+      suggest_variant_rename: yes
+    Obliquity:
+      suggest_variant_rename: yes
+    VoxelSizeDim1:
+      tolerance: 0.001
+      precision: 3
+      suggest_variant_rename: yes
+    VoxelSizeDim2:
+      tolerance: 0.001
+      precision: 3
+      suggest_variant_rename: yes
+    VoxelSizeDim3:
+      tolerance: 0.001
+      precision: 3
+      suggest_variant_rename: yes
+  perf:
+    Dim1Size:
+      suggest_variant_rename: yes
+    Dim2Size:
+      suggest_variant_rename: yes
+    Dim3Size:
+      suggest_variant_rename: yes
+    NSliceTimes:
+      suggest_variant_rename: yes
+    NumVolumes:
+      suggest_variant_rename: yes
+    Obliquity:
+      suggest_variant_rename: yes
+    VoxelSizeDim1:
+      tolerance: 0.001
+      precision: 3
+      suggest_variant_rename: yes
+    VoxelSizeDim2:
+      tolerance: 0.001
+      precision: 3
+      suggest_variant_rename: yes
+    VoxelSizeDim3:
+      tolerance: 0.001
+      precision: 3
+      suggest_variant_rename: yes
+  other:
+    Dim1Size:
+      suggest_variant_rename: yes
+    Dim2Size:
+      suggest_variant_rename: yes
+    Dim3Size:
+      suggest_variant_rename: yes
+    NSliceTimes:
+      suggest_variant_rename: yes
+    NumVolumes:
+      suggest_variant_rename: yes
+    VoxelSizeDim1:
+      tolerance: 0.001
+      precision: 3
+      suggest_variant_rename: yes
+    VoxelSizeDim2:
+      tolerance: 0.001
+      precision: 3
+      suggest_variant_rename: yes
+    VoxelSizeDim3:
+      tolerance: 0.001
+      precision: 3
+      suggest_variant_rename: yes
+# These fields reflect relationships between images.
+# Not modality specific
+relational_params:
+  FieldmapKey:
+    # can be
+    # "bool": a single column with true if an IntendedFor is present
+    # "columns": List all intended key groups in separate columns
+    display_mode: bool
+    suggest_variant_rename: yes
+  IntendedForKey:
+    # can be
+    # "bool": a single column with true if an IntendedFor is present
+    # "columns": List all intended key groups in separate columns
+    display_mode: bool
+    suggest_variant_rename: yes
+# BIDS fields to directly include in the Parameter Groupings
+sidecar_params:
+  anat:
+    DeviceSerialNumber:
+      suggest_variant_rename: no
+    MagneticFieldStrength:
+      suggest_variant_rename: no   
+    ProtocolName:
+      suggest_variant_rename: no
+    SeriesDescription:
+      suggest_variant_rename: no
+    RepetitionTime:
+      tolerance: 0.05
+      precision: 6
+      suggest_variant_rename: yes
+    EchoTime:
+      tolerance: 0.01
+      precision: 3
+      suggest_variant_rename: yes
+    FlipAngle:
+      precision: 3
+      suggest_variant_rename: no 
+    ImageOrientation:
+      display_mode: string
+      suggest_variant_rename: no
+    SliceThickness:
+      display_mode: float
+      suggest_variant_rename: no
+    MultibandAccelerationFactor:
+      suggest_variant_rename: yes
+    InversionTime:
+      suggest_variant_rename: no
+  dwi:
+    DeviceSerialNumber:
+      suggest_variant_rename: no
+    MagneticFieldStrength:
+      suggest_variant_rename: no
+    EchoTime:
+      tolerance: 0.0001
+      precision: 3
+      suggest_variant_rename: no
+    ProtocolName:
+      suggest_variant_rename: no
+    RepetitionTime:
+      tolerance: 0.000001
+      precision: 6
+      suggest_variant_rename: yes
+  fmap:
+    DeviceSerialNumber:
+      suggest_variant_rename: no
+    MagneticFieldStrength:
+      suggest_variant_rename: no
+    EchoTime:
+      tolerance: 0.0001
+      precision: 3
+      suggest_variant_rename: no
+    ProtocolName:
+      suggest_variant_rename: no
+    RepetitionTime:
+      tolerance: 0.000001
+      precision: 6
+      suggest_variant_rename: yes
+  func:
+    DeviceSerialNumber:
+      suggest_variant_rename: no
+    MagneticFieldStrength:
+      suggest_variant_rename: no
+    EchoTime:
+      tolerance: 0.0001
+      precision: 3
+      suggest_variant_rename: no
+    ProtocolName:
+      suggest_variant_rename: no
+    RepetitionTime:
+      tolerance: 0.000001
+      precision: 6
+      suggest_variant_rename: yes
+  perf:
+    DeviceSerialNumber:
+      suggest_variant_rename: no
+    MagneticFieldStrength:
+      suggest_variant_rename: no
+    EchoTime:
+      tolerance: 0.0001
+      precision: 3
+      suggest_variant_rename: no
+    ProtocolName:
+      suggest_variant_rename: no
+    RepetitionTime:
+      tolerance: 0.000001
+      precision: 6
+      suggest_variant_rename: yes
+  other:
+    DeviceSerialNumber:
+      suggest_variant_rename: no
+    MagneticFieldStrength:
+      suggest_variant_rename: no   
+    ProtocolName:
+      suggest_variant_rename: no
+    SeriesDescription:
+      suggest_variant_rename: no
+    RepetitionTime:
+      tolerance: 0.05
+      precision: 6
+      suggest_variant_rename: yes
+    EchoTime:
+      tolerance: 0.01
+      precision: 3
+      suggest_variant_rename: yes
+    FlipAngle:
+      precision: 3
+      suggest_variant_rename: no 
+    ImageOrientation:
+      display_mode: string
+      suggest_variant_rename: no
+    SliceThickness:
+      display_mode: float
+      suggest_variant_rename: no
+    MultibandAccelerationFactor:
+      suggest_variant_rename: yes
+    InversionTime:
+      suggest_variant_rename: no
